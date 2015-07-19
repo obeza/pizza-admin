@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="pizzaAdmin">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pizza Admin</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="libs/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="libs/bootstrap-theme.min.css">
+
+		<script src="libs/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="libs/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="css/spinner.css">
+        <link rel="stylesheet" href="style.css">
+	
+		<script src="libs/angular.min.js"></script>
+		<script src="libs/angular-ui-router.min.js"></script>
+        <script src="libs/angular-resource.min.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/route.js"></script>
+        <script src="app/service-data-rest.js"></script>
+        <script src="app/service-actif-couleur.js"></script>
+
+		<script src="app/accueil/accueil-ctrl.js"></script>
+		<script src="app/restaurateurs/liste-ctrl.js"></script>
+		<script src="app/restaurateurs/creer-ctrl.js"></script>
+        <script src="app/restaurateurs/modifier-ctrl.js"></script>
+        <script src="app/restaurateurs/gestion-ctrl.js"></script>
+        <script src="app/utilisateur/liste-ctrl.js"></script>
+        <script src="app/utilisateur/ajouter-ctrl.js"></script>
+        <script src="app/utilisateur/gestion-utilisateur.js"></script>
+        <script src="app/categorie/liste-ctrl.js"></script>
+        <script src="app/categorie/ajouter-ctrl.js"></script>
+        <script src="app/categorie/modifier-ctrl.js"></script>
+        <script src="app/article/ajouter-ctrl.js"></script>
+        <script src="app/article/modifier-ctrl.js"></script>
+
+    </head>
+    <body>
+		<div class="container">
+        <div ui-view></div>
+        </div>
+
+    </body>
+</html>

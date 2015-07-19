@@ -1,0 +1,11 @@
+
+<div class="list-group">
+
+	<a href="#/restaurateurs/gestion/{{etab.id}}" class="btn btn-primary btn-lg" role="button">Retour à la gestion de l'établissement</a>
+
+	<h2>Etablissement : {{etab.nom}}</h2>
+	<a href="#/utilisateur/ajouter/{{etab.id}}" class="list-group-item">Ajouter</a>
+
+	<a ng-repeat="liste in listes" href="#/restaurateur/{{etab.id}}/utilisateur/gestion/{{liste.id}}" class="list-group-item">{{liste.nom}}</a>
+
+</div>

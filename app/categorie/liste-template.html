@@ -1,0 +1,14 @@
+
+<div class="list-group">
+
+	<ol class="breadcrumb">
+		<li><a href="#/restaurateurs">Accueil</a></li>
+		<li><a href="#/restaurateurs/gestion/{{etab.id}}">{{etab.nom}}</a></li>
+		<li class="active">Catégories</li>
+	</ol>
+
+	<a href="#/restaurateur/{{etab.id}}/categorie/ajouter" class="list-group-item"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter une catégorie</a>
+
+	<a ng-repeat="liste in listes" href="#/restaurateur/{{etab.id}}/categorie/modifier/{{liste.id}}" class="list-group-item {{actif(liste.statut)}}">{{liste.nom}}</a>
+
+</div>

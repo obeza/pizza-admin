@@ -1,0 +1,35 @@
+<div class="row">
+
+	<div class="col-lg-10">
+		<a href="#/utilisateur/liste/{{restoId}}" class="btn btn-primary btn-lg" role="button">Retour à la gestion de cet établissement</a>
+
+		<h1>Modifier un utilisateur à l'établissement : {{etab.nom}}</h1>
+
+		<form role="form" ng-submit="modifier()">
+
+		  <div class="form-group">
+		    <label for="nom">Nom</label>
+		    <input type="text" class="form-control" id="nom" placeholder="nom" required ng-model="fiche.nom">
+		  </div>
+		  <div class="form-group">
+		    <label for="email">Paypal</label>
+		    <input type="text" class="form-control" id="email" placeholder="email" ng-model="fiche.email">
+		  </div>	
+		  <div class="form-group">
+		    <label for="passe">Passe</label>
+		    <input type="text" class="form-control" id="passe" placeholder="passe" ng-model="fiche.passe">
+		  </div>
+		  
+		  <div class="checkbox">
+		    <label>
+		      <input ng-model="fiche.statut" type="checkbox" ng-true-value="'Y'" ng-false-value="'N'">Actif
+		    </label>
+  		  </div>
+  		
+		   <button type="submit" class="btn btn-default" >Modifier</button>
+
+		</form>
+
+	</div>
+
+</div>
