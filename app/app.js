@@ -6,5 +6,5 @@
 // 'starter.controllers' is found in controllers.js
 
 
-var app = angular.module('pizzaAdmin', ['ui.router','ngResource']);
+var app = angular.module('pizzaAdmin', ['ui.router','ngResource', 'angularFileUpload']);
 

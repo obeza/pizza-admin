@@ -2,7 +2,7 @@ app.factory('dataRestService', ['$resource', function($resource){
 
 
 return $resource(
-        "http://localhost:8888/pizza-service/:controller/:id",
+        "http://fdacentral.com/api/pizza-service/:controller/:id",
         {
         	id: '@id',
         	controller:'@controller'
