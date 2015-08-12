@@ -5,7 +5,7 @@ if ( !empty( $_FILES ) ) {
     $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
     //$uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
 
-    $uploadPath = "/Applications/MAMP/htdocs/projet-pizza/images/menu" . DIRECTORY_SEPARATOR . $_POST['nomdufichier'];
+    $uploadPath = "/home/fdacentrdf/www/img/pizza/" . $_POST['nomdufichier'];
 
     move_uploaded_file( $tempPath, $uploadPath );
 

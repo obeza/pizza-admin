@@ -15,6 +15,7 @@ app.controller('articleModifierController', ['$scope','dataRestService','$stateP
 		controller:"article"
 	});
 
+    $scope.fiche.img = 'http://fdacentral.com/img/pizza/art'+$stateParams.artId+'.jpg';
 	$scope.modifier = function(){
 		
 		$scope.fiche.$update({
@@ -36,14 +37,14 @@ app.controller('articleModifierController', ['$scope','dataRestService','$stateP
 	*/
 
 	var uploader = $scope.uploader = new FileUploader({
-            url: 'upload.php'
+            url: 'http://fdacentral.com/api/upload-pizza.php'
             
         });
 
         // FILTERS
 
         uploader.filters.push({
-            name: 'customFilter',
+            name: "art" + $stateParams.artId + ".jpg",
             fn: function(item /*{File|FileLikeObject}*/, options) {
                 return this.queue.length < 10;
             }
@@ -59,9 +60,10 @@ app.controller('articleModifierController', ['$scope','dataRestService','$stateP
         };
         uploader.onAfterAddingAll = function(addedFileItems) {
             console.info('onAfterAddingAll', addedFileItems);
+
         };
         uploader.onBeforeUploadItem = function(item) {
-        	item.formData.push({nomdufichier: 'menu' + $stateParams.artId + '.jpg'});
+        	item.formData.push({nomdufichier: 'art' + $stateParams.artId + '.jpg'});
             console.info('onBeforeUploadItem', item);
         };
         uploader.onProgressItem = function(fileItem, progress) {
@@ -72,6 +74,7 @@ app.controller('articleModifierController', ['$scope','dataRestService','$stateP
         };
         uploader.onSuccessItem = function(fileItem, response, status, headers) {
             console.info('onSuccessItem', fileItem, response, status, headers);
+            $scope.fiche.img = $scope.fiche.img;
         };
         uploader.onErrorItem = function(fileItem, response, status, headers) {
             console.info('onErrorItem', fileItem, response, status, headers);
