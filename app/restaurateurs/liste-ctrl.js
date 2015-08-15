@@ -2,4 +2,5 @@ app.controller('restauListeController', ['$scope','dataRestService', function($s
 	
 	$scope.listes = dataRestService.query({controller:"etablissement"});
 
+
 }]);
